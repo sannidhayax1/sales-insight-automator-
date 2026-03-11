@@ -1,0 +1,90 @@
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+}
+
+.status-text {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Success state */
+.status-success {
+  background: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid #4caf50;
+  color: #2e7d32;
+}
+
+.status-success .status-icon {
+  color: #4caf50;
+}
+
+/* Error state */
+.status-error {
+  background: rgba(244, 67, 54, 0.1);
+  border-left: 4px solid #f44336;
+  color: #c62828;
+}
+
+.status-error .status-icon {
+  color: #f44336;
+}
+
+/* Loading state */
+.status-loading {
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 4px solid #667eea;
+  color: #3949ab;
+}
+
+.status-loading .status-icon {
+  color: #667eea;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .status-message {
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .status-text {
+    font-size: 0.9rem;
+  }
+}

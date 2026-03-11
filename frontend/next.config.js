@@ -7,8 +7,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
-// Add this configuration for path aliases if needed
-const withWebpack = require('next/webpack')
-
-// Alternative simpler approach - just use relative imports
